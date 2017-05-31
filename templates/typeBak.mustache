@@ -1,14 +1,11 @@
 {{#tsType}}
-{
-    {{#properties}}
-    {{name}} : {{#isArray}}{{{datatypeWithEnum}}}{{/isArray}}{{^isArray}}{{{datatype}}}{{/isArray}};
-    {{/properties}}
-
-}
-
+{{! must use different delimiters to avoid ambiguities when delimiters directly follow a literal brace {. }}
+{{=<% %>=}}
+<%#isRef%><%target%><%/isRef%><%!
 %><%#isAtomic%><%&tsType%><%/isAtomic%><%!
 %><%#isObject%>{<%#properties%>
 '<%name%>': <%>type%><%/properties%>
 }<%/isObject%><%!
 %><%#isArray%>Array<<%#elementType%><%>type%><%/elementType%>>|<%#elementType%><%>type%><%/elementType%><%/isArray%>
+<%={{ }}=%>
 {{/tsType}}

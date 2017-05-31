@@ -29,6 +29,7 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/wcandillon/swagger-js-codegen",
   "dependencies": {
+    "@types/lodash": "^4.14.64",
     "commander": "^2.9.0",
     "js-beautify": "^1.5.1",
     "jshint": "^2.5.1",

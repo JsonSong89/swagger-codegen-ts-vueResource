@@ -10,15 +10,18 @@ var rp = require('request-promise-native');
 
 
 var CodeGen = require('../lib/codegen').CodeGen;
+var CodeGen2 = require('../lib/codegen2').CodeGen;
+var CodeGenTs = require('../lib/codegenTs').CodeGen;
 
 
 function getCode() {
     rp("http://local.jsonsong.com:4070/v2/api-docs").then(swaggerStr => {
-        var result = CodeGen.getTypescriptCode({
-            className: 'Test',
+        var result = CodeGenTs.getTypescriptCode({
+            className: 'bms',
             swagger: JSON.parse(swaggerStr)
         });
-        fs.writeFileSync("../dist/api.ts", result,{})
+        fs.writeFileSync("../dist/api.ts", result, {});
+        process.exit()
     });
 }
 
