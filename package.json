@@ -34,6 +34,7 @@
     "jshint": "^2.5.1",
     "lodash": "^4.15.0",
     "mustache": "^2.0.0",
+    "request-promise-native": "^1.0.4",
     "update-notifier": "^2.1.0"
   },
   "devDependencies": {
@@ -44,7 +45,7 @@
     "grunt-vows": "^0.4.1",
     "matchdep": "^1.0.1 ",
     "q": "^1.0.1",
-    "request": "^2.40.0",
+    "request": "^2.81.0",
     "superagent": "^3.3.1",
     "tmp": "0.0.31",
     "typescript": "^2.1.4",
